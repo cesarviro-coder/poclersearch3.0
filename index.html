@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101828">
+  <title>PoclerSearch | Busca a tu manera</title>
+  <meta name="description" content="PoclerSearch: buscador con resultados de páginas, imágenes, vídeos y noticias.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="PoclerSearch inicio"><span class="brand-mark">P</span><span>Pocler<span class="brand-accent">Search</span></span></a>
+    <span class="tagline">Tu búsqueda, en un solo lugar</span>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="logo-big"><span class="brand-mark">P</span></div>
+      <h1>Pocler<span>Search</span></h1>
+      <p>Explora páginas, imágenes, vídeos y noticias.</p>
+      <form id="search-form" class="search-form">
+        <span class="search-symbol" aria-hidden="true">⌕</span>
+        <input id="query" name="q" type="search" placeholder="¿Qué quieres encontrar?" autocomplete="off" required>
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="quick-searches">
+        <button type="button" data-query="planetas extrasolares">Planetas extrasolares</button>
+        <button type="button" data-query="historia de internet">Historia de Internet</button>
+        <button type="button" data-query="animales">Animales</button>
+      </div>
+      <p class="notice">Los resultados aparecen aquí mismo. No te enviamos a DuckDuckGo.</p>
+    </section>
+
+    <section id="results-section" class="results-section hidden" aria-live="polite">
+      <div class="results-heading">
+        <div><p class="eyebrow">RESULTADOS DE BÚSQUEDA</p><h2 id="results-title"></h2></div>
+        <button id="new-search" class="secondary-button" type="button">Nueva búsqueda</button>
+      </div>
+      <nav class="tabs" aria-label="Tipo de resultados">
+        <button class="tab active" data-tab="web" type="button">⌕ Páginas</button>
+        <button class="tab" data-tab="images" type="button">▧ Imágenes</button>
+        <button class="tab" data-tab="videos" type="button">▷ Vídeos</button>
+        <button class="tab" data-tab="news" type="button">▤ Noticias</button>
+      </nav>
+      <div id="status" class="status">Buscando resultados…</div>
+      <div id="web-results" class="result-list tab-panel"></div>
+      <div id="images-results" class="image-grid tab-panel hidden"></div>
+      <div id="videos-results" class="result-list tab-panel hidden"></div>
+      <div id="news-results" class="result-list tab-panel hidden"></div>
+      <p class="source-note">PoclerSearch presenta resultados obtenidos de servicios públicos como Wikipedia, Wikimedia Commons y GDELT. No es todavía un rastreador completo de toda la web.</p>
+    </section>
+  </main>
+
+  <footer><span>© PoclerSearch</span><span>Buscador independiente en desarrollo</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
